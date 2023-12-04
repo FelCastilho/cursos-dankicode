@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .conteudo h2 span{
+            font-size: 13px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .conteudo p{
+            overflow: hidden;
+            height: 10px;
+            transition: 0.5s;
+        }
+        .mostrar{
+            height: 200px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+
+        <h2>Titulo do conteudo <span class="btn">Ver mais</span></h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A magni aut fugit corrupti consequuntur non nisi placeat ad laboriosam veniam ea aliquam, itaque eius commodi odit. Odio earum ullam maiores. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, consequuntur ullam! Facilis eaque soluta voluptatum, distinctio unde necessitatibus officia eveniet magni consequuntur dicta ea laborum quos omnis fugit autem quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, consequuntur ullam! Facilis eaque soluta voluptatum, distinctio unde necessitatibus officia eveniet magni consequuntur dicta ea laborum quos omnis fugit autem quaerat.</p>
+        
+    </div>
+
+    <div class="conteudo">
+
+        <h2>Titulo do conteudo <span class="btn">Ver mais</span></h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A magni aut fugit corrupti consequuntur non nisi placeat ad laboriosam veniam ea aliquam, itaque eius commodi odit. Odio earum ullam maiores. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, consequuntur ullam! Facilis eaque soluta voluptatum, distinctio unde necessitatibus officia eveniet magni consequuntur dicta ea laborum quos omnis fugit autem quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, consequuntur ullam! Facilis eaque soluta voluptatum, distinctio unde necessitatibus officia eveniet magni consequuntur dicta ea laborum quos omnis fugit autem quaerat.</p>
+        
+    </div>
+
+    <script>
+
+        let btn = document.querySelectorAll(".btn");
+        let content = document.querySelectorAll(".conteudo p");
+
+        for(let i = 0; i < content.length; i++){
+            btn[i].addEventListener('click', () => {
+            if(content[i].classList.contains('mostrar')){
+                content[i].classList.remove('mostrar');
+            }else{
+                content[i].classList.add('mostrar');
+            }
+        })
+        }
+
+        
+        /*
+        btn[1].addEventListener('click', () => {
+            if(content[1].classList.contains('mostrar')){
+                content[1].classList.remove('mostrar');
+            }else{
+                content[1].classList.add('mostrar');
+            }
+        })
+        */
+
+
+
+    </script>
+</body>
+</html>

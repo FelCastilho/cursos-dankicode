@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+    </div>
+    
+
+    <script>
+        fetch('https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05dabebf9604&language=en-US&page=1', {
+            method: 'GET',
+        })
+        .then(response => response.json())
+        .then((json) => {
+
+            let container = document.querySelector('.container');
+            
+            json.results.map((val) => {
+                container.innerHTML += `
+                
+                `+val.title + ` <hr>
+                
+                `;
+            })
+        })
+    </script>
+</body>
+</html>
