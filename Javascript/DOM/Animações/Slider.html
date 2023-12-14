@@ -47,30 +47,30 @@
         </div>
 
         <script>
+            //Pegando a ultima imagem que ta aparecendo
             var lastIndex = 0;
-
+            
             var images = document.querySelectorAll('.container img');
 
-            images.forEach((item,index)=>{
+            images.forEach((item, index,) => {
+
                 document.querySelectorAll('.bullet-single')[index]
-                .addEventListener('click',()=>{
+                .addEventListener('click', () => {
+
                     let lastImage = document.querySelectorAll('.container img')[lastIndex];
-                    let actualImage = document.querySelectorAll('.container img')[index];
-                    
-                    //Resetar as bullets e setar a nova com base na imagem.
 
-                    document.querySelectorAll('.bullet-single')[lastIndex]
-                    .classList.remove('active-bullet');
-                    
-                    
-                    document.querySelectorAll('.bullet-single')[index]
-                    .classList.add('active-bullet');
+                    let actualImage = document.querySelectorAll(".container img")[index];
 
+                    //Resetando as bullets e setando a nova com base na imagem
+                    document.querySelectorAll('.bullet-single')[lastIndex].classList.remove('active-bullet');
+
+                    document.querySelectorAll(".bullet-single")[index].classList.add('active-bullet');
+
+                    
                     lastImage.style.opacity = 0;
                     actualImage.style.opacity = 1;
 
                     lastIndex = index;
-                    
                 })
             })
 
