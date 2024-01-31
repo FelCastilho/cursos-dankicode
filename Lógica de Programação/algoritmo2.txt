@@ -1,0 +1,21 @@
+Proposta: Crie um algoritmo que vai validar a entrada de um cinema. O usuário pode entrar somente quando o horario for maior ou igual ao horario do filme.
+
+Restrição: Caso passe do horario ele só pode entrar em 30 min.
+
+Iniciar algortimo
+
+    //Declarando variavel
+    horarioFilme = 1
+    horaAtual = 0
+
+
+    //Impondo a condição
+
+    Se(horarioAtual == horarioFilme e horarioAtual < horarioFilme + 30){
+        Posso entrar
+    }Se nao{
+        Não posso entrar, tenho que esperar o horario
+    }
+
+
+Finalizar algortimo
